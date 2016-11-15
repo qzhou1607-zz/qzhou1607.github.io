@@ -18,4 +18,9 @@ $(document).ready(function() {
         },1000);
         return false;
     });
+    
+    //close nav bar dropdown menu after select
+    // $(".navbar-right").find("a").on('click',function() {
+    //     $(".navbar-collapse").collapse("hide");
+    // });
 });

@@ -193,6 +193,14 @@ nav ul li a:before {
     margin:5px;
 }
 
+#contact-me a {
+    color:#bbb;
+}
+
+#contact-me a:hover {
+    color:#aaa;
+}
+
 /*timeline*/
 .timeline {
   list-style: none;
