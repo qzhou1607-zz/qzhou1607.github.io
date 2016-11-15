@@ -10,7 +10,8 @@
 	<link rel="stylesheet" type="text/css" href="css/ionicons.min.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  	<script src="main.js"></script>
+  	<script src="vendors/typed.js"></script>
+  	<script src="script.js"></script>
 </head>
 
 <body id="bootstrap-override">
@@ -25,19 +26,20 @@
 		      </button>
 		      <!--<a class="navbar-brand" href="#"> Qing Zhou</a>-->
 		    </div>
-		    <div class="collapse navbar-collapse" id="myNavbar">
+		    <div class="collapse navbar-collapse stroke" id="myNavbar">
 			    <ul class="nav navbar-nav navbar-right">
 			      <li><a href="#about-me">About Me</a></li>
-			      <li><a href="#my-projects">My Recent Projects</a></li>
+			      <li><a href="#my-career">My Career</a></li>
+			      <li><a href="#my-projects">Side Projects</a></li>
 			      <!--<li><a href="#">My Research</a></li>-->
-			      <li><a href="#contact-me">Connect With Me</a></li>
+			      <li><a href="#contact-me">Connect with Me</a></li>
 			    </ul>
 		    </div>
 		  </div>
 		</nav>	
 		<div id="hero-text">
 			<p id="name">Qing Zhou</p>
-	    	<p id="descrption">A Full-Stack Developer</p>
+	    	<p><span id="description"></span></p>
 	    </div>
 	</header>
 	<div id="about-me">
@@ -48,37 +50,117 @@
 			I'm passionate about extending creative solutions to emerging practical problems using web applications. I love coding and reading papers equally.
 		</p>
 	</div>
+	<div class="divider"></div>
+	<div id="my-career">
+		<h2>My Career</h2>
+		<div class="row">
+		<ul class="timeline">
+			<li>
+				<div class="timeline-badge"><i class="icon ion-code-working"></i></div>
+          			<div class="timeline-panel">
+			            <div class="timeline-heading">
+			              	<h4 class="timeline-title">Full Stack Developer</h4>
+			              	<h5><b>Odysys Inc, Bend, OR</b></h5>
+			              	<p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2016</small></p>
+			            </div>
+		            <div class="timeline-body">
+						<p>Project: Full-stack web application development using PHP, MySQL, JavaScript. I'm responsible for the integration of third-party APIs, development of new features, and also serve as the onsite technical customer support.</p>
+		            </div>
+          		</div>
+			</li>
+			
+			<li class="timeline-inverted">
+          		<div class="timeline-badge warning"><i class="icon ion-erlenmeyer-flask"></i></div>
+          			<div class="timeline-panel">
+            			<div class="timeline-heading">
+              				<h4 class="timeline-title">Research & Development Engineer </h4>
+          					<h5><b>GenapSys Inc, Redwood City, CA</b></h5>
+              				<p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2015</small></p>
+            			</div>
+			            <div class="timeline-body">
+			              	<p>
+			              	Project: Automation of Next-generation Sequencing library preparation using digital pneumatic microfluidics (DPM)
+			              	</p>
+			            </div>
+          			</div>
+        	</li>
+        	
+        	<li>
+				<div class="timeline-badge"><i class="icon ion-university"></i></div>
+          			<div class="timeline-panel">
+			            <div class="timeline-heading">
+			              	<h4 class="timeline-title">Graduate Researcher</h4>
+			              	<h5><b>Univeristy of California, Davis</b></h5>
+			              	<p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2016</small></p>
+			            </div>
+		            <div class="timeline-body">
+						<p>Project: Biosensor for Cell Analysis in Microfluidic Devices.</p>
+		            </div>
+          		</div>
+			</li>
+		</ul>
+		</div>
+	</div>
 	<div id="my-projects">
 		<div class="row">
-			<h2>My Recent Projects</h2>
+			<h2>Side Projects</h2>
 		</div>
 		
 		<div class="col-md-4 col-sm-12 wrapper">
-			<img src="images/stock-watcher.jpg" class="screenshot">
+			<a href=" https://watch-your-stock.herokuapp.com/" target="_blank">
+				<img src="images/stock-watcher.jpg" class="screenshot">
+			</a>
 			<div class="caption">
 				<p>
-					This is a stock-monitoring web application, which allows you to search for stocks and display stock data in a highly interactive chart, built using Angular JS, Node/Express, and MongoDB.
+					This is a stock-monitoring web application, which allows you to search for stocks and display stock data in a highly interactive chart, built using Angular JS, Node/Express, MongoDB and socket.io.
 				</p>
 			</div>
 		</div>
 
 		<div class="col-md-4 col-sm-12 wrapper">
-			<img src="images/out-tonight.jpg" class="screenshot">
+			<a href="https://out-tonight.herokuapp.com/" target="_blank">
+				<img src="images/out-tonight.jpg" class="screenshot">
+			</a>
 			<div class="caption">
 				<p>
-				This is a night-activity coordination application, which allows you to search for bars/night activities in an area and log in with your twitter accounts to RSVP.
+				This is a night-activity coordination application, which allows you to search for night activities in an area and log in with your twitter accounts to RSVP, built using the MEAN stack and Passport.js.
 				</p>
 			</div>
 		</div>
 		
 		<div class="col-md-4 col-sm-12 wrapper">
-			<img src="images/sam-game.jpg" class="screenshot">
+			<a href="http://codepen.io/claire514/full/yaqyEb/" target="_blank">
+				<img src="images/sam-game.jpg" class="screenshot">
+			</a>
 			<div class="caption">
 				<p>
 				This is an emulation of the classic memory game, built using jQuery and pure CSS.
 				</p>
 			</div>
 		</div>
+		
+		<!--<div class="col-md-4 col-sm-12 wrapper">-->
+		<!--	<a href="http://codepen.io/claire514/full/BowmOa/" target="_blank">-->
+		<!--		<img src="images/tic-tac-toe.jpg" class="screenshot">-->
+		<!--	</a>-->
+		<!--	<div class="caption">-->
+		<!--		<p>-->
+		<!--		This is an emulation of the classic memory game, built using jQuery and pure CSS.-->
+		<!--		</p>-->
+		<!--	</div>-->
+		<!--</div>-->
+		
+		<!--<div class="col-md-4 col-sm-12 wrapper">-->
+		<!--	<a href="http://codepen.io/claire514/full/BowmOa/" target="_blank">-->
+		<!--		<img src="images/clock.jpg" class="screenshot">-->
+		<!--	</a>-->
+		<!--	<div class="caption">-->
+		<!--		<p>-->
+		<!--		This is an emulation of the classic memory game, built using jQuery and pure CSS.-->
+		<!--		</p>-->
+		<!--	</div>-->
+		<!--</div>-->
+		
 		
 	</div>
 	<div id="contact-me">
